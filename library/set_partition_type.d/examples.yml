@@ -1,0 +1,6 @@
+---
+
+- set-disk-part:
+    disk: disk-by-id/scsi-36000c29e7f7c63c3576dc22cbfb2cf34
+    part: 1
+    type: LVM

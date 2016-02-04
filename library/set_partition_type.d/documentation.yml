@@ -1,0 +1,43 @@
+---
+
+module: set-partition-type
+
+short_description: Set the type of a disk partition
+
+description:
+
+  - Set the type of a disk partition
+  - Only a subset of type is accepted
+
+options:
+  disk:
+    description:
+      - The name of the disk
+      - This is auto prefixed by C(/dev/disk/)
+    required: true
+    default: null
+    version_added: 1.4
+  partition:
+    description:
+      - The partition number
+      - Appended to the disk name
+    required: true
+    default: null
+    choices: [ 1, 2, 3 ]
+    aliases: [ part ]
+    version_added: 1.4
+  type:
+    description:
+      - The type of the partition
+    required: false
+    default: LVM
+    choices: [ LVM, Linux ]
+    aliases: [ name ]
+    version_added: 1.4
+
+author: Thierry Delamare
+notes:
+  - Use sfdisk via shell command
+  - Known Partition type C(Linux), C(LVM)
+requirements:
+  - C(/bin/sfdisk)

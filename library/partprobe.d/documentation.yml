@@ -1,0 +1,18 @@
+---
+
+module: partprobe
+
+short_description: Runs partprobe on the remote system
+
+description:
+
+     - Tell if a disk has partitions
+
+options:
+  disk:
+    description:
+      - The partial path (prefixed by /dev/disk/) of the disk to get partition info of
+
+notes: []
+requirements: [ "parted" ]
+author: Thierry Delamare

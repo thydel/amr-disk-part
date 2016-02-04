@@ -1,0 +1,8 @@
+---
+
+- partprobe: disk=disk-by-id/scsi-36000c29e7f7c63c3576dc22cbfb2cf34
+  register: disk
+  always_run: yes
+
+- debug: msg="Disk is not partitioned"
+  when: disk.partprobe.partitionned == false

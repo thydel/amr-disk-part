@@ -1,0 +1,8 @@
+# Ansible managed: /home/thy/usr/epi2/roles/init-repos/templates/hgignore.j2 modified by thy on make.epiconcept.local
+
+syntax: glob
+      
+*~
+
+
+
